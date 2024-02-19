@@ -24,7 +24,7 @@ export default class Game {
 
   rotateRound() {
     this.#scoreBoard.forEach((value, key) => {
-      const randomNumber = generateRandomNumber({ from: 0, to: 9 });
+      const randomNumber = generateRandomNumber();
       if (randomNumber >= VALID_CONSTANTS_CONFIG.CONDITIONS_FOR_MOVING_FORWARD) {
         this.#scoreBoard.set(key, this.#scoreBoard.get(key) + 1);
       }
