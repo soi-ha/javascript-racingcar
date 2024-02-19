@@ -21,7 +21,7 @@ export default class Validator {
   }
 
   static validateSpecialCharacter(car) {
-    if (REGEX_CONFIG.SPECIAL_CHARACTER.test(car)) {
+    if (REGEX_CONFIG.EXCLUDED_CHARACTERS_REGEX_PATTERN.test(car)) {
       throw new AppError(ERROR_MESSAGE.HAVE_SPECIAL_CHARACTERS);
     }
   }
